@@ -1061,7 +1061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDuration: 0.75
-  paladinWait: 0
+  paladinWait: 0.5
 --- !u!1 &755119299
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,6 +1459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7644608898964962033, guid: dd07ed6ea1ae0d3489305541ce52d5dd, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd07ed6ea1ae0d3489305541ce52d5dd, type: 3}
 --- !u!4 &1076895913 stripped
@@ -1636,7 +1640,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280329189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.16, y: 0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3488,7 +3492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1868638543}
-  _paladin: {fileID: 0}
+  _paladin: {fileID: 1906337043}
   spawnPoints:
   - {fileID: 2071433575}
   - {fileID: 1220625036}
@@ -3548,6 +3552,10 @@ PrefabInstance:
     - target: {fileID: 324382137231277677, guid: 22500cfce7f82bf469ad2d55876e5e0d, type: 3}
       propertyPath: m_SortingOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3125611572308681771, guid: 22500cfce7f82bf469ad2d55876e5e0d, type: 3}
+      propertyPath: maxSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4177586744879408092, guid: 22500cfce7f82bf469ad2d55876e5e0d, type: 3}
       propertyPath: m_newColors.Array.data[0].a
@@ -3633,6 +3641,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7383355140407187504, guid: 22500cfce7f82bf469ad2d55876e5e0d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7644608898964962033, guid: 22500cfce7f82bf469ad2d55876e5e0d, type: 3}
       propertyPath: m_Name
       value: Paladin
@@ -3647,12 +3659,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 6635085974020473708, guid: 22500cfce7f82bf469ad2d55876e5e0d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 22500cfce7f82bf469ad2d55876e5e0d, type: 3}
 --- !u!4 &1906337042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5266847910692370086, guid: 22500cfce7f82bf469ad2d55876e5e0d, type: 3}
   m_PrefabInstance: {fileID: 1906337041}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1906337043 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9217291437640712250, guid: 22500cfce7f82bf469ad2d55876e5e0d, type: 3}
+  m_PrefabInstance: {fileID: 1906337041}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656d9c12f6172274f9acc2d6218b0b1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1908478378
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     public delegate void GameStateDelegate(GameState state);
     public static event GameStateDelegate GameStateChanged;
 
+    public delegate void GoblinKilled(Goblin goblin);
+    public static event GoblinKilled OnGoblinKilled;
+
     void Start()
     {
         if (Instance == null) Instance = this;
@@ -58,6 +61,7 @@ public class GameManager : MonoBehaviour
 
     public void DestroyGoblin(Goblin goblin)
     {
+        OnGoblinKilled?.Invoke(goblin);
         goblinlist.Remove(goblin);
         Destroy(goblin.gameObject);
     }
@@ -68,6 +72,7 @@ public class GameManager : MonoBehaviour
         Goblin nearestGoblin = null;
         foreach(Goblin goblin in goblinlist)
         {
+            if (goblin == null) continue;
             if (Vector2.Distance(goblin.transform.position, position) < minDistance)
             {
                 nearestGoblin = goblin;
